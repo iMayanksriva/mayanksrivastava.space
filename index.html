@@ -1,35 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mayank Kumar Srivastava | Portfolio & Blog</title>
-  <style>
-    /* ===== Global Styles ===== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Segoe UI", Arial, sans-serif;
-    }
-    body {
-      background: #f9f9f9;
-      color: #333;
-      line-height: 1.6;
-    }
-    a {
-      color: #0078ff;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
 
-    /* ===== Navbar ===== */
+  <!-- Google Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    /* Global */
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f4f6f9;
+      color: #333;
+    }
+    a {text-decoration: none; color: inherit;}
+    img {max-width: 100%; border-radius: 10px;}
+
+    /* Navbar */
     nav {
-      background: #222;
-      color: #fff;
-      padding: 1rem 2rem;
+      background: #1a1a2e;
+      padding: 1rem 5%;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -38,113 +32,147 @@
       z-index: 1000;
     }
     nav h1 {
-      font-size: 1.5rem;
-      letter-spacing: 1px;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.3rem;
     }
     nav ul {
-      list-style: none;
       display: flex;
-      gap: 1rem;
+      list-style: none;
+      gap: 1.5rem;
     }
-    nav ul li {
-      display: inline;
+    nav ul li a {
+      color: #eee;
+      font-weight: 500;
+      transition: 0.3s;
     }
+    nav ul li a:hover {color: #00c6ff;}
 
-    /* ===== Hero Section ===== */
+    /* Hero Section */
     header {
-      text-align: center;
-      padding: 5rem 2rem;
+      height: 100vh;
       background: linear-gradient(to right, #0078ff, #00c6ff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
       color: white;
+      padding: 0 2rem;
     }
     header h2 {
       font-size: 2.5rem;
+      margin-bottom: 1rem;
     }
     header p {
-      margin-top: 1rem;
       font-size: 1.2rem;
+      margin-bottom: 2rem;
     }
+    header .btn {
+      background: white;
+      color: #0078ff;
+      padding: 0.8rem 1.5rem;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    header .btn:hover {background: #eee;}
 
-    /* ===== Sections ===== */
+    /* Sections */
     section {
-      padding: 3rem 2rem;
-      max-width: 1000px;
-      margin: auto;
+      padding: 4rem 8%;
     }
     section h2 {
-      margin-bottom: 1.5rem;
       text-align: center;
+      margin-bottom: 2rem;
       font-size: 2rem;
       color: #0078ff;
     }
-    .about, .research, .blog, .contact {
-      background: white;
-      border-radius: 10px;
-      padding: 2rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      margin-bottom: 2rem;
+
+    /* About */
+    .about p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      text-align: center;
     }
 
-    /* ===== Blog Cards ===== */
+    /* Research */
+    .research-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .research-item {
+      background: #fff;
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      flex: 1 1 200px;
+      text-align: center;
+      font-weight: 500;
+    }
+
+    /* Blog */
     .blog-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
+      gap: 2rem;
     }
     .blog-post {
-      background: #f1f1f1;
-      padding: 1rem;
-      border-radius: 8px;
-      transition: transform 0.2s;
+      background: #fff;
+      border-radius: 15px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
     }
-    .blog-post:hover {
-      transform: translateY(-5px);
-    }
+    .blog-post:hover {transform: translateY(-8px);}
     .blog-post h3 {
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.8rem;
+      font-size: 1.3rem;
     }
     .blog-post p {
-      font-size: 0.9rem;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #555;
     }
 
-    /* ===== Contact ===== */
+    /* Contact */
     .contact p {
       text-align: center;
       margin: 0.5rem 0;
+      font-size: 1.1rem;
+    }
+    .contact a {
+      color: #0078ff;
+      font-weight: 600;
     }
 
-    /* ===== Footer ===== */
+    /* Footer */
     footer {
-      background: #222;
+      background: #1a1a2e;
       color: white;
       text-align: center;
       padding: 1rem;
     }
 
-    /* ===== Responsive ===== */
-    @media(max-width:768px) {
-      nav ul {
+    /* Responsive */
+    @media(max-width:768px){
+      nav ul {display: none;}
+      nav.active ul {
+        display: flex;
         flex-direction: column;
-        background: #333;
+        background: #16213e;
         position: absolute;
         top: 60px;
-        right: 0;
-        width: 200px;
-        display: none;
+        right: 5%;
         padding: 1rem;
+        border-radius: 8px;
       }
-      nav ul.active {
-        display: flex;
-      }
-      nav .menu-toggle {
-        display: block;
-        cursor: pointer;
-      }
+      .menu-toggle {display: block; cursor: pointer; color: white;}
     }
-    .menu-toggle {
-      display: none;
-      font-size: 1.5rem;
-    }
+    .menu-toggle {display: none;}
   </style>
 </head>
 <body>
@@ -152,7 +180,7 @@
   <!-- Navbar -->
   <nav>
     <h1>Mayank KS</h1>
-    <span class="menu-toggle">☰</span>
+    <span class="menu-toggle"><i class="fas fa-bars"></i></span>
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#research">Research</a></li>
@@ -161,50 +189,56 @@
     </ul>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <header>
-    <h2>Hello, I'm Mayank Kumar Srivastava</h2>
-    <p>Assistant Professor | AI & ML Enthusiast | Researcher in Machine Learning and Deep Learning</p>
+    <div>
+      <h2>Hello, I'm <span style="font-weight:700;">Mayank Kumar Srivastava</span></h2>
+      <p>Assistant Professor | Researcher in Machine Learning & Deep Learning</p>
+      <a href="#about" class="btn">Explore My Work</a>
+    </div>
   </header>
 
-  <!-- About Section -->
+  <!-- About -->
   <section id="about" class="about">
     <h2>About Me</h2>
-    <p>I am an Assistant Professor with a keen interest in Artificial Intelligence and Machine Learning. My academic and research focus lies in exploring innovative solutions in Machine Learning and Deep Learning to solve real-world challenges.</p>
+    <p>I am an Assistant Professor with a strong passion for Artificial Intelligence and Machine Learning. 
+      My research primarily focuses on exploring cutting-edge methods in Machine Learning and Deep Learning 
+      to solve complex, real-world problems. I enjoy teaching, mentoring, and sharing knowledge 
+      to inspire the next generation of AI enthusiasts.</p>
   </section>
 
-  <!-- Research Section -->
+  <!-- Research -->
   <section id="research" class="research">
-    <h2>Research & Interests</h2>
-    <ul>
-      <li>Artificial Intelligence</li>
-      <li>Machine Learning</li>
-      <li>Deep Learning</li>
-      <li>Neural Networks</li>
-      <li>Data-Driven Applications</li>
-    </ul>
+    <h2>Research Interests</h2>
+    <div class="research-list">
+      <div class="research-item">Artificial Intelligence</div>
+      <div class="research-item">Machine Learning</div>
+      <div class="research-item">Deep Learning</div>
+      <div class="research-item">Neural Networks</div>
+      <div class="research-item">Data-Driven Systems</div>
+    </div>
   </section>
 
-  <!-- Blog Section -->
+  <!-- Blog -->
   <section id="blog" class="blog">
-    <h2>My Blog</h2>
+    <h2>Latest Blog Posts</h2>
     <div class="blog-container">
       <div class="blog-post">
-        <h3>Introduction to Machine Learning</h3>
-        <p>A beginner-friendly overview of Machine Learning concepts and real-world use cases.</p>
+        <h3>Understanding Machine Learning Basics</h3>
+        <p>A beginner-friendly article explaining key ML concepts and their applications in daily life.</p>
       </div>
       <div class="blog-post">
-        <h3>Deep Learning Trends in 2025</h3>
-        <p>Exploring the latest advancements in Deep Learning and their impact on academia and industry.</p>
+        <h3>Deep Learning in 2025</h3>
+        <p>An overview of the latest trends and research breakthroughs in the field of Deep Learning.</p>
       </div>
       <div class="blog-post">
         <h3>AI for Education</h3>
-        <p>How Artificial Intelligence is reshaping the future of teaching and learning.</p>
+        <p>Exploring how AI technologies are transforming the education sector for teachers and learners alike.</p>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- Contact -->
   <section id="contact" class="contact">
     <h2>Contact Me</h2>
     <p>Email: <a href="mailto:mayank@example.com">mayank@example.com</a></p>
@@ -218,13 +252,12 @@
   </footer>
 
   <script>
-    // Mobile Menu Toggle
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('nav ul');
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
+    // Mobile nav toggle
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
     });
   </script>
-
 </body>
 </html>
