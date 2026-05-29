@@ -1,1 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arunachal Pradesh — Tezpur to Itanagar to Ziro Valley | Mayank Srivastava</title>
+  <meta name="description" content="A travel story of a scenic bike journey from Tezpur to Itanagar and then to Ziro Valley." />
 
+  <style>
+    :root {
+      --bg: #fdf6ec;
+      --bg-dark: #0f0e0d;
+      --card: #ffffff;
+      --text: #1a1714;
+      --muted: #6f665d;
+      --accent: #e8924a;
+      --accent-2: #c9733d;
+      --border: rgba(26, 23, 20, 0.10);
+      --shadow: 0 8px 32px rgba(0,0,0,0.08);
+      --radius: 24px;
+      --radius-sm: 14px;
+      --max: 1080px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #fff8ef 0%, var(--bg) 100%);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(10px);
+      background: rgba(253, 246, 236, 0.9);
+      border-bottom: 1px solid rgba(26, 23, 20, 0.08);
+    }
+
+    .topbar__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+
+    .brand__mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      box-shadow: 0 8px 20px rgba(232, 146, 74, 0.35);
+      flex-shrink: 0;
+    }
+
+    .topbar__link {
+      font-size: 0.95rem;
+      color: var(--accent-2);
+      font-weight: 600;
+    }
+
+    .hero {
+      padding: 48px 0 30px;
+    }
+
+    .hero__grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: var(--accent-2);
+      margin-bottom: 14px;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+      line-height: 1.15;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 4.3rem);
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 60ch;
+    }
+
+    .hero__meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .pill {
+      background: rgba(232, 146, 74, 0.12);
+      color: var(--accent-2);
+      border: 1px solid rgba(232, 146, 74, 0.18);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    .hero__visual {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      min-height: 320px;
+      background: linear-gradient(135deg, #d2a57b 0%, #8f6a4b 100%);
+    }
+
+    .hero__visual img {
+      width: 100%;
+      height: 100%;
+      min-height: 320px;
+      object-fit: cover;
+    }
+
+    .hero__badge {
+      position: absolute;
+      left: 18px;
+      top: 18px;
+      background: rgba(15, 14, 13, 0.84);
+      color: #fff;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 8px 12px;
+      border-radius: 999px;
+      backdrop-filter: blur(8px);
+    }
+
+    .section {
+      padding: 30px 0 48px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .story {
+      padding: 28px;
+    }
+
+    .story__header {
+      margin-bottom: 22px;
+    }
+
+    .story__header h2 {
+      font-size: clamp(1.7rem, 3vw, 2.6rem);
+      margin-bottom: 8px;
+    }
+
+    .story__header p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .route {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 24px 0 30px;
+    }
+
+    .route__item {
+      background: #fffaf4;
+      border: 1px solid rgba(26, 23, 20, 0.08);
+      border-radius: var(--radius-sm);
+      padding: 18px;
+    }
+
+    .route__label {
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.72rem;
+      color: var(--accent-2);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .route__item h3 {
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+    }
+
+    .route__item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .story__lead {
+      font-size: 1.05rem;
+      color: var(--text);
+      margin-bottom: 18px;
+    }
+
+    .story__grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 24px;
+      align-items: start;
+      margin-top: 26px;
+    }
+
+    .photo-block {
+      border-radius: 20px;
+      overflow: hidden;
+      min-height: 340px;
+      background: linear-gradient(135deg, #e9d3bd 0%, #b98f66 100%);
+      border: 1px solid rgba(26, 23, 20, 0.08);
+      position: relative;
+    }
+
+    .photo-block img {
+      width: 100%;
+      height: 100%;
+      min-height: 340px;
+      object-fit: cover;
+    }
+
+    .photo-block__caption {
+      position: absolute;
+      left: 16px;
+      right: 16px;
+      bottom: 16px;
+      background: rgba(15, 14, 13, 0.72);
+      color: #fff;
+      padding: 14px 16px;
+      border-radius: 16px;
+      font-size: 0.92rem;
+      backdrop-filter: blur(10px);
+    }
+
+    .story__text p {
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .story__quote {
+      margin: 20px 0;
+      padding: 18px 20px;
+      border-left: 4px solid var(--accent);
+      background: rgba(232, 146, 74, 0.08);
+      border-radius: 0 16px 16px 0;
+      color: #4d3b2a;
+      font-style: italic;
+      font-size: 1.03rem;
+    }
+
+    .gallery {
+      margin-top: 28px;
+    }
+
+    .gallery__title {
+      font-size: 1.2rem;
+      margin-bottom: 14px;
+    }
+
+    .gallery__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .mini-photo {
+      border-radius: 18px;
+      overflow: hidden;
+      min-height: 180px;
+      background: #eee;
+      border: 1px solid rgba(26, 23, 20, 0.08);
+    }
+
+    .mini-photo img {
+      width: 100%;
+      height: 100%;
+      min-height: 180px;
+      object-fit: cover;
+    }
+
+    .mini-photo .placeholder,
+    .photo-block .placeholder,
+    .hero__visual .placeholder {
+      width: 100%;
+      height: 100%;
+      min-height: inherit;
+      display: grid;
+      place-items: center;
+      color: rgba(255, 255, 255, 0.8);
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(135deg, #c38f63, #8a623f);
+    }
+
+    .backlink {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 26px;
+      color: var(--accent-2);
+      font-weight: 700;
+    }
+
+    .footer {
+      padding: 18px 0 34px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero__grid,
+      .story__grid {
+        grid-template-columns: 1fr;
+      }
+      .route {
+        grid-template-columns: 1fr;
+      }
+      .gallery__grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .story,
+      .hero {
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .story {
+        padding: 20px;
+      }
+      .hero__visual,
+      .photo-block,
+      .mini-photo {
+        min-height: 240px;
+      }
+      .hero__visual img,
+      .photo-block img,
+      .mini-photo img {
+        min-height: 240px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <div class="brand">
+        <div class="brand__mark">MS</div>
+        <div>
+          <div>Mayank Srivastava</div>
+          <small style="color: var(--muted); font-weight: 600;">Travel Diary · Arunachal Pradesh</small>
+        </div>
+      </div>
+      <a class="topbar__link" href="../index.html">← Back to Home</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__grid">
+        <div>
+          <span class="eyebrow">Bike Journey</span>
+          <h1>Tezpur to Itanagar to Ziro Valley</h1>
+          <p>
+            This trip through Arunachal Pradesh felt like one long scenic movie scene — winding roads,
+            forest edges, hills opening and closing around us, and the kind of silence that only the
+            mountains know how to keep.
+          </p>
+          <div class="hero__meta">
+            <span class="pill">Arunachal Pradesh</span>
+            <span class="pill">Bike Ride</span>
+            <span class="pill">Tezpur → Itanagar → Ziro Valley</span>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="hero__badge">Featured Ride</div>
+          <!-- Replace with your real image path if available -->
+          <img src="../assets/arunachal-hero.jpg" alt="Scenic bike journey through Arunachal Pradesh" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder\'>Add your hero photo here<br><small style=\'opacity:.85;font-weight:600\'>../assets/arunachal-hero.jpg</small></div>'" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container card story">
+        <div class="story__header">
+          <h2>The road that kept unfolding</h2>
+          <p>A small travel story from the hills, written as we moved from Tezpur to Itanagar and then to Ziro Valley.</p>
+        </div>
+
+        <div class="route">
+          <div class="route__item">
+            <div class="route__label">Start</div>
+            <h3>Tezpur</h3>
+            <p>We began the ride from Tezpur, with the air already carrying the freshness of the northeast.</p>
+          </div>
+          <div class="route__item">
+            <div class="route__label">Middle</div>
+            <h3>Itanagar</h3>
+            <p>The road to Itanagar was full of sharp turns, green slopes, and scenic stops that made every kilometre worth it.</p>
+          </div>
+          <div class="route__item">
+            <div class="route__label">End</div>
+            <h3>Ziro Valley</h3>
+            <p>By the time we reached Ziro, the landscape had turned calm and wide, with beauty that felt almost unreal.</p>
+          </div>
+        </div>
+
+        <p class="story__lead">
+          The best part of the ride was not just reaching the destinations, but watching the scenery change slowly from town roads to mountain curves, from busy stretches to quiet valleys.
+        </p>
+
+        <div class="story__grid">
+          <div class="story__text">
+            <p>
+              We started from Tezpur early, with the bike loaded and the route ahead full of promise.
+              The road to Itanagar gave us everything a rider dreams of — open stretches, forest cover,
+              mountain bends, and sudden viewpoints where we had to stop just to breathe in the scenery.
+            </p>
+            <p>
+              Itanagar felt like a natural pause in the journey. After spending time there, the ride to
+              Ziro Valley became the most memorable stretch. The road kept climbing and turning, and every
+              turn revealed another postcard-like view: hills wrapped in mist, deep green slopes, and
+              a quietness that made the whole journey feel sacred.
+            </p>
+            <p>
+              Ziro Valley was the reward at the end of the ride. The scenery opened up beautifully, the
+              air felt lighter, and the entire place carried a peaceful charm. Riding there on a bike made
+              the journey even more personal — we did not just visit the place, we earned it mile by mile.
+            </p>
+            <div class="story__quote">
+              “Some roads are not about speed. They are about letting the landscape slowly become part of you.”
+            </div>
+            <p>
+              For me, this Arunachal ride was a reminder that travel is not only about seeing a destination.
+              It is also about the stretches in between — the tea stops, the bends, the silence, the shared
+              smiles, and the feeling that the world is bigger and more beautiful than we imagine from home.
+            </p>
+          </div>
+
+          <div class="photo-block">
+            <!-- Replace with your real image path if available -->
+            <img src="../assets/arunachal-road.jpg" alt="Scenic road from Tezpur to Itanagar and Ziro Valley" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder\'>Add a scenic road photo here<br><small style=\'opacity:.85;font-weight:600\'>../assets/arunachal-road.jpg</small></div>'" />
+            <div class="photo-block__caption">
+              A scenic stretch somewhere between Itanagar and Ziro Valley — the kind of road that makes you stop just to look around.
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery">
+          <h3 class="gallery__title">More moments from the ride</h3>
+          <div class="gallery__grid">
+            <div class="mini-photo">
+              <img src="../assets/arunachal-1.jpg" alt="Arunachal Pradesh landscape" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder\'>Photo 1</div>'" />
+            </div>
+            <div class="mini-photo">
+              <img src="../assets/arunachal-2.jpg" alt="Bike stop in Arunachal Pradesh" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder\'>Photo 2</div>'" />
+            </div>
+            <div class="mini-photo">
+              <img src="../assets/arunachal-3.jpg" alt="Ziro Valley scenic view" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder\'>Photo 3</div>'" />
+            </div>
+          </div>
+        </div>
+
+        <a class="backlink" href="../index.html">← Back to Home</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      © <span id="year"></span> Mayank Srivastava · Travel Diary
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
