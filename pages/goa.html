@@ -1,1 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Goa — Bangalore to North Goa, Panaji, Old Goa & South Goa | Mayank Srivastava</title>
+  <meta name="description" content="A 7-day Goa travel story from Bangalore by overnight bus, with North Goa, Panaji, Old Goa, and South Goa explored by three friends." />
 
+  <style>
+    :root {
+      --bg: #fdf6ec;
+      --card: #ffffff;
+      --text: #1a1714;
+      --muted: #6f665d;
+      --accent: #e8924a;
+      --accent-2: #c9733d;
+      --border: rgba(26, 23, 20, 0.10);
+      --shadow: 0 8px 32px rgba(0,0,0,0.08);
+      --radius: 24px;
+      --radius-sm: 14px;
+      --max: 1080px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #fff8ef 0%, var(--bg) 100%);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(10px);
+      background: rgba(253, 246, 236, 0.9);
+      border-bottom: 1px solid rgba(26, 23, 20, 0.08);
+    }
+
+    .topbar__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+
+    .brand__mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      box-shadow: 0 8px 20px rgba(232, 146, 74, 0.35);
+      flex-shrink: 0;
+    }
+
+    .topbar__link {
+      font-size: 0.95rem;
+      color: var(--accent-2);
+      font-weight: 600;
+    }
+
+    .hero {
+      padding: 48px 0 30px;
+    }
+
+    .hero__grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: var(--accent-2);
+      margin-bottom: 14px;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+      line-height: 1.15;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 4.3rem);
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 60ch;
+    }
+
+    .hero__meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .pill {
+      background: rgba(232, 146, 74, 0.12);
+      color: var(--accent-2);
+      border: 1px solid rgba(232, 146, 74, 0.18);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    .hero__visual {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      min-height: 320px;
+      background: linear-gradient(135deg, #d2a57b 0%, #8f6a4b 100%);
+    }
+
+    .hero__visual img {
+      width: 100%;
+      height: 100%;
+      min-height: 320px;
+      object-fit: cover;
+    }
+
+    .hero__badge {
+      position: absolute;
+      left: 18px;
+      top: 18px;
+      background: rgba(15, 14, 13, 0.84);
+      color: #fff;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 8px 12px;
+      border-radius: 999px;
+      backdrop-filter: blur(8px);
+    }
+
+    .section {
+      padding: 30px 0 48px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .story {
+      padding: 28px;
+    }
+
+    .story__header {
+      margin-bottom: 22px;
+    }
+
+    .story__header h2 {
+      font-size: clamp(1.7rem, 3vw, 2.6rem);
+      margin-bottom: 8px;
+    }
+
+    .story__header p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .route {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 24px 0 30px;
+    }
+
+    .route__item {
+      background: #fffaf4;
+      border: 1px solid rgba(26, 23, 20, 0.08);
+      border-radius: var(--radius-sm);
+      padding: 18px;
+    }
+
+    .route__label {
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.72rem;
+      color: var(--accent-2);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .route__item h3 {
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+    }
+
+    .route__item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .story__lead {
+      font-size: 1.05rem;
+      color: var(--text);
+      margin-bottom: 18px;
+    }
+
+    .story__grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 24px;
+      align-items: start;
+      margin-top: 26px;
+    }
+
+    .photo-block {
+      border-radius: 20px;
+      overflow: hidden;
+      min-height: 340px;
+      background: linear-gradient(135deg, #e9d3bd 0%, #b98f66 100%);
+      border: 1px solid rgba(26, 23, 20, 0.08);
+      position: relative;
+    }
+
+    .photo-block img {
+      width: 100%;
+      height: 100%;
+      min-height: 340px;
+      object-fit: cover;
+    }
+
+    .photo-block__caption {
+      position: absolute;
+      left: 16px;
+      right: 16px;
+      bottom: 16px;
+      background: rgba(15, 14, 13, 0.72);
+      color: #fff;
+      padding: 14px 16px;
+      border-radius: 16px;
+      font-size: 0.92rem;
+      backdrop-filter: blur(10px);
+    }
+
+    .story__text p {
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .story__quote {
+      margin: 20px 0;
+      padding: 18px 20px;
+      border-left: 4px solid var(--accent);
+      background: rgba(232, 146, 74, 0.08);
+      border-radius: 0 16px 16px 0;
+      color: #4d3b2a;
+      font-style: italic;
+      font-size: 1.03rem;
+    }
+
+    .gallery {
+      margin-top: 28px;
+    }
+
+    .gallery__title {
+      font-size: 1.2rem;
+      margin-bottom: 14px;
+    }
+
+    .gallery__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .mini-photo {
+      border-radius: 18px;
+      overflow: hidden;
+      min-height: 180px;
+      background: #eee;
+      border: 1px solid rgba(26, 23, 20, 0.08);
+    }
+
+    .mini-photo img {
+      width: 100%;
+      height: 100%;
+      min-height: 180px;
+      object-fit: cover;
+    }
+
+    .mini-photo .placeholder,
+    .photo-block .placeholder,
+    .hero__visual .placeholder {
+      width: 100%;
+      height: 100%;
+      min-height: inherit;
+      display: grid;
+      place-items: center;
+      color: rgba(255, 255, 255, 0.8);
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(135deg, #c38f63, #8a623f);
+    }
+
+    .backlink {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 26px;
+      color: var(--accent-2);
+      font-weight: 700;
+    }
+
+    .footer {
+      padding: 18px 0 34px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero__grid,
+      .story__grid {
+        grid-template-columns: 1fr;
+      }
+      .route {
+        grid-template-columns: 1fr;
+      }
+      .gallery__grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .story,
+      .hero {
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .story {
+        padding: 20px;
+      }
+      .hero__visual,
+      .photo-block,
+      .mini-photo {
+        min-height: 240px;
+      }
+      .hero__visual img,
+      .photo-block img,
+      .mini-photo img {
+        min-height: 240px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <div class="brand">
+        <div class="brand__mark">MS</div>
+        <div>
+          <div>Mayank Srivastava</div>
+          <small style="color: var(--muted); font-weight: 600;">Travel Diary · Goa</small>
+        </div>
+      </div>
+      <a class="topbar__link" href="../index.html">← Back to Home</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__grid">
+        <div>
+          <span class="eyebrow">Overnight Bus Journey</span>
+          <h1>Bangalore to Goa: Seven Days, Three Friends, and a Beautiful Kind of Chaos</h1>
+          <p>
+            We left Bangalore by overnight bus and arrived with sleepy eyes, too much luggage, and the kind of excitement that only a Goa trip can create. One of us was from Rajasthan, two of us were from Rajasthan, and the trip began in the best possible disorder.
+          </p>
+          <div class="hero__meta">
+            <span class="pill">Goa</span>
+            <span class="pill">7 Days</span>
+            <span class="pill">3 Friends</span>
+            <span class="pill">Overnight Bus + Flight Return</span>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="hero__badge">Featured Trip</div>
+          <img src="../assets/goa-hero.jpg" alt="Goa travel story" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder\'>Add your hero photo here<br><small style=\'opacity:.85;font-weight:600\'>../assets/goa-hero.jpg</small></div>'" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container card story">
+        <div class="story__header">
+          <h2>The kind of trip that starts in chaos and ends in peace</h2>
+          <p>A realistic Goa story of North Goa, Panaji, Old Goa, and South Goa — with beaches, churches, cafes, and a lot of laughter.</p>
+        </div>
+
+        <div class="route">
+          <div class="route__item">
+            <div class="route__label">Days 1–2</div>
+            <h3>North Goa</h3>
+            <p>Anjuna, forts, beaches, chaos, and the first burst of Goa energy after the overnight bus ride.</p>
+          </div>
+          <div class="route__item">
+            <div class="route__label">Days 3–4</div>
+            <h3>Panaji & Old Goa</h3>
+            <p>Japanese Garden, Vasco da Gama area, church visits, and a peaceful Christmas vibe.</p>
+          </div>
+          <div class="route__item">
+            <div class="route__label">Days 5–7</div>
+            <h3>South Goa & Return</h3>
+            <p>Beaches one by one, cafes, cheesecake, Hangyo ice cream, and a calm flight back home.</p>
+          </div>
+        </div>
+
+        <p class="story__lead">
+          Goa has a way of making even a simple trip feel cinematic. Ours began in Bangalore on an overnight bus, with three friends carrying enough excitement to ignore the discomfort of sleeping half-curled in a moving seat.
+        </p>
+
+        <div class="story__grid">
+          <div class="story__text">
+            <p>
+              We reached Goa with the slightly chaotic energy that only a long bus journey can create. One friend was already teasing everyone about the luggage, another was hunting for breakfast, and the third was insisting that the first beach stop should happen immediately. It was the perfect start because the trip did not begin neatly — it began like a real group trip should, in noise, laughter, and confusion.
+            </p>
+            <p>
+              The first two days belonged to North Goa. That was where we got our first real taste of the coastline. Anjuna brought the familiar Goa rhythm — beach traffic, easy conversations, sudden photo stops, and the feeling that time had slowed down. The forts gave us one of those movie-like moments where three friends end up standing on a wall, looking out at the sea, pretending to be dramatic. Someone jokingly called it our own Dil Chahta Hai moment, and somehow the line stuck for the rest of the trip.
+            </p>
+            <p>
+              North Goa was also where the trip settled into its own pace. Some beaches were busy, some quieter, but each one had its own personality. We spent hours just moving from one spot to another, stopping for tea, cold drinks, and the occasional random conversation with strangers who seemed to be on their own holiday soundtrack.
+            </p>
+            <div class="story__quote">
+              “Every friend group has a Goa version of itself. Ours was equal parts confused, hungry, sunburnt, and completely happy.”
+            </div>
+            <p>
+              After the North Goa energy, Panaji felt calmer. The city had a cleaner, more settled rhythm. We visited the Japanese Garden, wandered around the Vasco da Gama side, and kept noticing how Goa changes character from street to street. Then came Old Goa, where the churches, open courtyards, and quiet atmosphere created a very different mood. It was especially memorable because the timing gave the trip a gentle Christmas feeling — peaceful, warm, reflective, and full of light.
+            </p>
+            <p>
+              The churches in Old Goa stayed with us longer than we expected. There is something about standing inside a place with so much history and silence that changes the pace of your mind. After all the beach energy, this part of the trip felt almost meditative. The contrast made Goa even more beautiful — not just a party destination, but also a place that knows how to be calm.
+            </p>
+            <p>
+              The last four days were for South Goa, and that was where the trip became slower, softer, and more personal. We moved from beach to beach without much hurry, enjoying the fact that South Goa does not demand attention in the same loud way North Goa does. It simply invites you to stay longer. The cafes were an important part of the story too. A good coffee, a proper dessert, a slice of cheesecake, and later a cold Hangyo ice cream somehow became the little rituals that held the day together.
+            </p>
+            <p>
+              By the time we were preparing to return, the trip had become one long sequence of beach sand, church bells, bus windows, cafe tables, and late-night conversations. The return flight felt like an opposite ending — after beginning on an overnight bus, we came back through the sky. It was a clean, comfortable way to close a trip that had started with noise and ended with gratitude.
+            </p>
+            <p>
+              Goa left us with more than photos. It gave us a memory of how three friends can turn a slightly messy plan into something unforgettable. We did not just visit Goa. We lived through its different moods — North Goa’s energy, Panaji’s balance, Old Goa’s peace, and South Goa’s slow beauty.
+            </p>
+            <div class="story__quote">
+              “A trip becomes memorable not because everything goes perfectly, but because the imperfect parts become the stories you keep telling.”
+            </div>
+          </div>
+
+          <div class="photo-block">
+            <img src="../assets/goa-road.jpg" alt="Goa road trip" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder\'>Add a scenic Goa photo here<br><small style=\'opacity:.85;font-weight:600\'>../assets/goa-road.jpg</small></div>'" />
+            <div class="photo-block__caption">
+              Somewhere between beaches, forts, and cafes — the kind of Goa frame that stays in your mind.
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery">
+          <h3 class="gallery__title">More moments from the trip</h3>
+          <div class="gallery__grid">
+            <div class="mini-photo">
+              <img src="../assets/anjuna-beach.jpg" alt="Anjuna Beach" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder\'>Anjuna Beach</div>'" />
+            </div>
+            <div class="mini-photo">
+              <img src="../assets/old-goa-church.jpg" alt="Old Goa Church" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder\'>Old Goa Church</div>'" />
+            </div>
+            <div class="mini-photo">
+              <img src="../assets/south-goa-beach.jpg" alt="South Goa Beach" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder\'>South Goa Beach</div>'" />
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery" style="margin-top: 22px;">
+          <h3 class="gallery__title">Trip facts</h3>
+          <div class="route" style="margin-top: 12px;">
+            <div class="route__item">
+              <div class="route__label">Travel Mode</div>
+              <h3>Overnight Bus + Flight Return</h3>
+              <p>Bangalore to Goa by bus, and a comfortable return flight home.</p>
+            </div>
+            <div class="route__item">
+              <div class="route__label">Group</div>
+              <h3>3 Friends</h3>
+              <p>Two friends came from Rajasthan, adding extra chaos, jokes, and energy.</p>
+            </div>
+            <div class="route__item">
+              <div class="route__label">Food Memory</div>
+              <h3>Cheesecake + Hangyo Ice Cream</h3>
+              <p>Cafes, desserts, and the little stops that quietly become part of the story.</p>
+            </div>
+          </div>
+        </div>
+
+        <a class="backlink" href="../index.html">← Back to Home</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      © <span id="year"></span> Mayank Srivastava · Travel Diary
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
