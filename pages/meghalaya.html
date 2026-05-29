@@ -1,1 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meghalaya — Guwahati to Jorabat to Shillong, Cherrapunji, Dawki & Beyond | Mayank Srivastava</title>
+  <meta name="description" content="A travel story of a 4-day bike journey through Meghalaya with six friends on three Royal Enfield Himalayans." />
 
+  <style>
+    :root {
+      --bg: #fdf6ec;
+      --bg-dark: #0f0e0d;
+      --card: #ffffff;
+      --text: #1a1714;
+      --muted: #6f665d;
+      --accent: #e8924a;
+      --accent-2: #c9733d;
+      --border: rgba(26, 23, 20, 0.10);
+      --shadow: 0 8px 32px rgba(0,0,0,0.08);
+      --radius: 24px;
+      --radius-sm: 14px;
+      --max: 1080px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #fff8ef 0%, var(--bg) 100%);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(10px);
+      background: rgba(253, 246, 236, 0.9);
+      border-bottom: 1px solid rgba(26, 23, 20, 0.08);
+    }
+
+    .topbar__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+
+    .brand__mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      box-shadow: 0 8px 20px rgba(232, 146, 74, 0.35);
+      flex-shrink: 0;
+    }
+
+    .topbar__link {
+      font-size: 0.95rem;
+      color: var(--accent-2);
+      font-weight: 600;
+    }
+
+    .hero {
+      padding: 48px 0 30px;
+    }
+
+    .hero__grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: var(--accent-2);
+      margin-bottom: 14px;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+      line-height: 1.15;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 4.3rem);
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 60ch;
+    }
+
+    .hero__meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .pill {
+      background: rgba(232, 146, 74, 0.12);
+      color: var(--accent-2);
+      border: 1px solid rgba(232, 146, 74, 0.18);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    .hero__visual {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      min-height: 320px;
+      background: linear-gradient(135deg, #d2a57b 0%, #8f6a4b 100%);
+    }
+
+    .hero__visual img {
+      width: 100%;
+      height: 100%;
+      min-height: 320px;
+      object-fit: cover;
+    }
+
+    .hero__badge {
+      position: absolute;
+      left: 18px;
+      top: 18px;
+      background: rgba(15, 14, 13, 0.84);
+      color: #fff;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 8px 12px;
+      border-radius: 999px;
+      backdrop-filter: blur(8px);
+    }
+
+    .section {
+      padding: 30px 0 48px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .story {
+      padding: 28px;
+    }
+
+    .story__header {
+      margin-bottom: 22px;
+    }
+
+    .story__header h2 {
+      font-size: clamp(1.7rem, 3vw, 2.6rem);
+      margin-bottom: 8px;
+    }
+
+    .story__header p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .route {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 24px 0 30px;
+    }
+
+    .route__item {
+      background: #fffaf4;
+      border: 1px solid rgba(26, 23, 20, 0.08);
+      border-radius: var(--radius-sm);
+      padding: 18px;
+    }
+
+    .route__label {
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.72rem;
+      color: var(--accent-2);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .route__item h3 {
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+    }
+
+    .route__item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .story__lead {
+      font-size: 1.05rem;
+      color: var(--text);
+      margin-bottom: 18px;
+    }
+
+    .story__grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 24px;
+      align-items: start;
+      margin-top: 26px;
+    }
+
+    .photo-block {
+      border-radius: 20px;
+      overflow: hidden;
+      min-height: 340px;
+      background: linear-gradient(135deg, #e9d3bd 0%, #b98f66 100%);
+      border: 1px solid rgba(26, 23, 20, 0.08);
+      position: relative;
+    }
+
+    .photo-block img {
+      width: 100%;
+      height: 100%;
+      min-height: 340px;
+      object-fit: cover;
+    }
+
+    .photo-block__caption {
+      position: absolute;
+      left: 16px;
+      right: 16px;
+      bottom: 16px;
+      background: rgba(15, 14, 13, 0.72);
+      color: #fff;
+      padding: 14px 16px;
+      border-radius: 16px;
+      font-size: 0.92rem;
+      backdrop-filter: blur(10px);
+    }
+
+    .story__text p {
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .story__quote {
+      margin: 20px 0;
+      padding: 18px 20px;
+      border-left: 4px solid var(--accent);
+      background: rgba(232, 146, 74, 0.08);
+      border-radius: 0 16px 16px 0;
+      color: #4d3b2a;
+      font-style: italic;
+      font-size: 1.03rem;
+    }
+
+    .gallery {
+      margin-top: 28px;
+    }
+
+    .gallery__title {
+      font-size: 1.2rem;
+      margin-bottom: 14px;
+    }
+
+    .gallery__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .mini-photo {
+      border-radius: 18px;
+      overflow: hidden;
+      min-height: 180px;
+      background: #eee;
+      border: 1px solid rgba(26, 23, 20, 0.08);
+    }
+
+    .mini-photo img {
+      width: 100%;
+      height: 100%;
+      min-height: 180px;
+      object-fit: cover;
+    }
+
+    .mini-photo .placeholder,
+    .photo-block .placeholder,
+    .hero__visual .placeholder {
+      width: 100%;
+      height: 100%;
+      min-height: inherit;
+      display: grid;
+      place-items: center;
+      color: rgba(255, 255, 255, 0.8);
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(135deg, #c38f63, #8a623f);
+    }
+
+    .backlink {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 26px;
+      color: var(--accent-2);
+      font-weight: 700;
+    }
+
+    .footer {
+      padding: 18px 0 34px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero__grid,
+      .story__grid {
+        grid-template-columns: 1fr;
+      }
+      .route {
+        grid-template-columns: 1fr;
+      }
+      .gallery__grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .story,
+      .hero {
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .story {
+        padding: 20px;
+      }
+      .hero__visual,
+      .photo-block,
+      .mini-photo {
+        min-height: 240px;
+      }
+      .hero__visual img,
+      .photo-block img,
+      .mini-photo img {
+        min-height: 240px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <div class="brand">
+        <div class="brand__mark">MS</div>
+        <div>
+          <div>Mayank Srivastava</div>
+          <small style="color: var(--muted); font-weight: 600;">Travel Diary · Meghalaya</small>
+        </div>
+      </div>
+      <a class="topbar__link" href="../index.html">← Back to Home</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__grid">
+        <div>
+          <span class="eyebrow">Bike Journey</span>
+          <h1>Six Friends, Three Royal Enfield Himalayans, and Four Unforgettable Days in Meghalaya</h1>
+          <p>
+            From Guwahati to Jorabat, then into the hills of Shillong, Cherrapunji, Dawki, Shnongpdeng,
+            Krang Suri and Jowai — this was one of those rides where every stop felt like a story.
+          </p>
+          <div class="hero__meta">
+            <span class="pill">Meghalaya</span>
+            <span class="pill">4 Days</span>
+            <span class="pill">6 Friends</span>
+            <span class="pill">3 Royal Enfield Himalayans</span>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="hero__badge">Featured Ride</div>
+          <img src="../assets/meghalaya-hero.jpg" alt="Scenic bike journey through Meghalaya" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder\'>Add your hero photo here<br><small style=\'opacity:.85;font-weight:600\'>../assets/meghalaya-hero.jpg</small></div>'" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container card story">
+        <div class="story__header">
+          <h2>The trip that began at a fuel station</h2>
+          <p>A real-road travel story from Guwahati to Jorabat, into the hills of Meghalaya, and back again.</p>
+        </div>
+
+        <div class="route">
+          <div class="route__item">
+            <div class="route__label">Start</div>
+            <h3>Guwahati → Jorabat</h3>
+            <p>The ride began with six friends, three Himalayan bikes, and a full tank of fuel at Jorabat.</p>
+          </div>
+          <div class="route__item">
+            <div class="route__label">Middle</div>
+            <h3>Shillong → Cherrapunji → Dawki</h3>
+            <p>Cloud roads, waterfalls, viewpoints, and the crystal-blue waters of Wah Umngot.</p>
+          </div>
+          <div class="route__item">
+            <div class="route__label">Finish</div>
+            <h3>Shnongpdeng → Krang Suri → Jowai → Shillong → Guwahati</h3>
+            <p>A final loop through some of Meghalaya’s most scenic and unforgettable landscapes.</p>
+          </div>
+        </div>
+
+        <p class="story__lead">
+          Every trip has one moment when it truly becomes memorable. For us, it started at Jorabat, just outside Guwahati.
+          The fuel station was the last ordinary place before the road opened into hills, lakes, clouds, and river valleys.
+        </p>
+
+        <div class="story__grid">
+          <div class="story__text">
+            <p>
+              We arrived at Jorabat early, the kind of early that still feels sleepy and fresh at the same time.
+              Three Royal Enfield Himalayans were lined up together, looking ready for the road while six friends
+              moved around them with the usual last-minute checks — gloves, camera bags, rain gear, water bottles,
+              phone mounts, and all the small things that somehow become essential once the ride begins.
+            </p>
+            <p>
+              The moment we took the great right turn toward Shillong, the city behind us began to disappear. The road
+              climbed steadily, the air turned cooler, and the scenery started changing in a way that made the whole
+              group go quieter than usual. There is a particular kind of silence that appears on beautiful roads — not
+              because people have nothing to say, but because they are too busy looking.
+            </p>
+            <p>
+              Umiam Lake was the first true pause of the journey. After the climb and the bends, the lake opened up in
+              front of us like a wide blue welcome. We stopped, removed our helmets, and just stood there for a while.
+              It was not the kind of stop that needs a reason. The view itself was the reason.
+            </p>
+            <p>
+              Shillong had its own rhythm, but our route was already pulling us forward. The road to Cherrapunji felt like
+              a ride made for motorcyclists — smooth stretches, sharp bends, cloud shadows moving across the slopes, and
+              one scenic turn after another. We kept stopping for viewpoints, not because we were lost, but because the
+              road kept offering better and better frames.
+            </p>
+            <p>
+              Dawki was one of those places that looked familiar in photographs and yet still managed to surprise us in person.
+              The Wah Umngot river was so clear that the boats almost appeared to float in the air. The colour of the water
+              kept changing with the light, shifting between blue, green, and a deep transparent turquoise that looked almost
+              unreal. Everyone took too many photos, and still no picture seemed enough.
+            </p>
+            <div class="story__quote">
+              “Some journeys are not remembered for one monument or one viewpoint. They are remembered for the people riding beside you, the weather, the bends, the laughs, and the feeling that the road itself is part of the adventure.”
+            </div>
+            <p>
+              Shnongpdeng slowed the trip down. After Dawki, the quieter river stretch gave us time to simply sit beside the water
+              and do nothing for a while. Then Krang Suri Falls changed the mood again. The walk in, the sound of water growing louder,
+              and the sudden sight of the turquoise falls made everyone stop talking for a moment. It was the kind of beauty that felt
+              earned, not just visited.
+            </p>
+            <p>
+              From Krang Suri we moved toward Jowai, then back to Shillong, and finally returned to Guwahati. By then the road was no
+              longer just a route. It had become a shared memory. Four days, six friends, three bikes, endless curves, and a country-side
+              feeling that stayed with us long after we reached home.
+            </p>
+            <p>
+              When people ask what made the trip special, I usually say it was the scenery. But the honest answer is a little bigger
+              than that. It was the feeling of moving together through one of the most beautiful corners of the Northeast, one stop at a
+              time, with enough time to notice everything.
+            </p>
+          </div>
+
+          <div class="photo-block">
+            <img src="../assets/meghalaya-road.jpg" alt="Scenic road through Meghalaya" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder\'>Add a scenic road photo here<br><small style=\'opacity:.85;font-weight:600\'>../assets/meghalaya-road.jpg</small></div>'" />
+            <div class="photo-block__caption">
+              Somewhere on the road between Shillong and Cherrapunji — the kind of view that makes you forget the map for a while.
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery">
+          <h3 class="gallery__title">More moments from the ride</h3>
+          <div class="gallery__grid">
+            <div class="mini-photo">
+              <img src="../assets/umiam-lake.jpg" alt="Umiam Lake" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder\'>Umiam Lake</div>'" />
+            </div>
+            <div class="mini-photo">
+              <img src="../assets/dawki-river.jpg" alt="Wah Umngot River at Dawki" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder\'>Dawki · Wah Umngot</div>'" />
+            </div>
+            <div class="mini-photo">
+              <img src="../assets/krang-suri.jpg" alt="Krang Suri Falls" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder\'>Krang Suri Falls</div>'" />
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery" style="margin-top: 22px;">
+          <h3 class="gallery__title">Trip facts</h3>
+          <div class="route" style="margin-top: 12px;">
+            <div class="route__item">
+              <div class="route__label">Duration</div>
+              <h3>4 Days</h3>
+              <p>Enough time to enjoy the road without rushing the views.</p>
+            </div>
+            <div class="route__item">
+              <div class="route__label">Riders</div>
+              <h3>6 Friends</h3>
+              <p>A tight group, lots of laughs, and perfect coordination on the road.</p>
+            </div>
+            <div class="route__item">
+              <div class="route__label">Bikes</div>
+              <h3>3 Royal Enfield Himalayans</h3>
+              <p>The ideal machines for winding roads, hills, and long scenic rides.</p>
+            </div>
+          </div>
+        </div>
+
+        <a class="backlink" href="../index.html">← Back to Home</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      © <span id="year"></span> Mayank Srivastava · Travel Diary
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
